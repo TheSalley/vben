@@ -1,3 +1,4 @@
+import path from "path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 
@@ -11,7 +12,11 @@ export default defineConfig({
       },
     },
   },
-  resolve: {},
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src")
+    }
+  },
   css: {
     preprocessorOptions: {},
   },
